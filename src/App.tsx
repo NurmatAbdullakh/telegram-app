@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     if (tg) {
-      // console.log(tg);
+      tg;
     }
   }, [tg]);
 

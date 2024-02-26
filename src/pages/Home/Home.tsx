@@ -1,14 +1,14 @@
+import { useInitData } from "@vkruglikov/react-telegram-web-app";
 import { useEffect } from "react";
-import useTelegram from "../../hooks/useTelegram";
 
 const Home = () => {
-  const tg = useTelegram();
+  const [InitDataUnsafe] = useInitData();
 
   useEffect(() => {
-    tg && console.log(JSON.stringify(tg.initDataUnsafe));
-  }, [tg]);
+    console.log(InitDataUnsafe);
+  }, [InitDataUnsafe]);
 
-  return <div>{tg?.initDataUnsafe.user?.first_name}</div>;
+  return <div>{InitDataUnsafe?.user?.first_name}</div>;
 };
 
 export default Home;
