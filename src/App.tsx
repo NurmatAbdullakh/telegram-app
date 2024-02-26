@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     if (tg) {
-      tg;
+      tg.ready();
     }
   }, [tg]);
 
