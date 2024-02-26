@@ -8,7 +8,7 @@ const Home = () => {
     tg && console.log(JSON.stringify(tg.initDataUnsafe));
   }, [tg]);
 
-  return <div>Home</div>;
+  return <div>{tg?.initDataUnsafe.user?.first_name}</div>;
 };
 
 export default Home;
