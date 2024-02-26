@@ -10,7 +10,7 @@ const Home = () => {
     }
   }, [initDataUnsafe]);
 
-  return <div>Home</div>;
+  return <div>{JSON.stringify(initDataUnsafe)}</div>;
 };
 
 export default Home;
