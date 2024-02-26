@@ -1,14 +1,14 @@
-import { useShowPopup, MainButton } from "@vkruglikov/react-telegram-web-app";
+import { useInitData } from "@vkruglikov/react-telegram-web-app";
+import { useEffect } from "react";
 
 const Home = () => {
-  const showPopup = useShowPopup();
+  const [initDataUnsafe, initData] = useInitData();
 
-  const handleClick = () =>
-    showPopup({
-      message: "Hello, I am popup",
-    });
+  useEffect(() => {
+    console.log(initDataUnsafe?.user);
+  }, [initData, initDataUnsafe]);
 
-  return <MainButton text="SHOW POPUP" onClick={handleClick} />;
+  return <div>{initDataUnsafe?.user?.first_name}</div>;
 };
 
 export default Home;
