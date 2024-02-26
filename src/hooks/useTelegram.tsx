@@ -1,10 +1,8 @@
-import { TelegramWebApps } from "telegram-webapps-types";
-interface CustomWindow extends Window {
-  Telegram?: TelegramWebApps.SDK;
-}
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
 
 const useTelegram = () => {
-  const tg = (window as CustomWindow)?.Telegram?.WebApp;
+  const tg = window?.Telegram?.WebApp;
   return tg;
 };
 
